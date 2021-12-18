@@ -10,7 +10,7 @@ class Cell:
         return Cell(self.quantity + other.quantity)
 
     def __sub__(self, other):
-        return self.quantity - other.quantity if (self.quantity - other.quantity) > 0 else print('Negative!')
+        return Cell(self.quantity - other.quantity) if (self.quantity - other.quantity) > 0 else print('Negative!')
 
     def __mul__(self, other):
         return Cell(int(self.quantity * other.quantity))
